@@ -47,7 +47,7 @@
 body {
     font-family: Sora;
     background-color: var(--UNICOLOR);
-    background:url(/assets/images/signup-bg.jpg);
+    background:url(signup-bg.jpg);
    height: 100vh;
    background-size: cover;
    background-position: center;
@@ -198,7 +198,7 @@ background-color: var(--UNICOLOR);
 
     body {
       
-    background:url(/assets/images/signup-bg.jpg);
+    background:url(signup-bg.jpg);
    height: 100vh;
    background-size: cover;
    background-position: center;
