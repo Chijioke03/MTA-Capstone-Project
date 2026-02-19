@@ -208,12 +208,21 @@ height: 100vh;
 /* AFFLIATES ASPECT || MAIN SECTION */
 .affliates {
     margin: 20px 0;
+
     
 }
-.affliates p {
+.affliates p,
+.affliates h3 {
     text-align: center;
     font-size: 12px;
+    margin: 20px 0;
 
+}
+
+.brand-icons {
+    display: flex;
+    justify-content: space-around;
+    gap:20px
 }
 
 
@@ -619,7 +628,7 @@ height: 100vh;
 .hero-text h1 {
     text-transform: uppercase;
     font-family: Barlow;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 1.5rem;
     color: var(--UNICOLOR);
 }
