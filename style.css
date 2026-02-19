@@ -19,7 +19,7 @@
 
 @font-face {
     font-family:Barlow ;
-    src: url(assets/fonts/BarlowFont/Barlow-Black.ttf);
+    src: url(assets/fonts/BarlowFont/Barlow-Bold.ttf);
 }
 
 * {
@@ -40,6 +40,22 @@
     --SEC-COLOR4: #F2E3BB;
     --SVGCOLOR: invert(20%) sepia(39%) saturate(3287%) hue-rotate(106deg) brightness(103%) contrast(105%)
 
+}
+
+/* ANIMATIONS SETTINGS */
+
+@keyframes showMenu {
+    0% {
+        transform:scaleY(0);
+}
+
+70% {
+    transform: scaleY(1.4);
+}
+
+100% {
+    transform: scaleY(1);
+}
 }
 
 
@@ -234,13 +250,18 @@ height: 100vh;
 }
 
 .courses {
-    
+    visibility: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 20px;
 }
 
+.show-courses {
+    visibility: visible;
+    transform-origin: top center ;
+    animation: showMenu 0.5s ease forwards;
+}
 
 .courses .cards {
     background-color:rgba(0, 0, 0, 0.5);
@@ -250,6 +271,11 @@ height: 100vh;
     height: 30vh;
     border-radius:20px ;
     background-blend-mode: overlay;
+
+}
+
+.courses .cards:hover {
+    box-shadow: 2px 2px 3px 2px var(--SEC-COLOR3);
 
 }
 
@@ -391,8 +417,8 @@ border-radius: 10px;
 .form {
   padding: 20px;
   border:none ;
-  color: var(--UNICOLOR);
-  background-color: var(--SEC-COLOR1);
+  color: var(--SEC-COLOR1);
+  background-color: transparent;
   border-radius: 20px;
   margin: 2rem 0;
   box-shadow: 2px 2px 2px 2px var(--SEC-COLOR2);
@@ -407,12 +433,13 @@ border-radius: 10px;
 
 .form input {
     padding: 10px;
-    border: none;
+    border: 2px solid var(--SEC-COLOR1);
     border-radius: 8px;
     margin-bottom: 20px;
 }
 
 .form textarea {
+    border:2px solid var(--SEC-COLOR1) ;
     border-radius: 8px;
      padding: 20px;
     display: block;
@@ -433,6 +460,8 @@ border-radius: 10px;
 
 .submit {
     font-weight:600 ;
+    background-color: var(--SEC-COLOR1);
+    color: var(--UNICOLOR);
 }
 
 .btn-container .submit:hover {
