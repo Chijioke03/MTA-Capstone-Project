@@ -42,6 +42,10 @@
 
 }
 
+html { 
+scroll-behavior: smooth;
+}
+
 /* ANIMATIONS SETTINGS */
 
 @keyframes showMenu {
